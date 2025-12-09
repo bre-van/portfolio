@@ -1,0 +1,24 @@
+@import '@fontsource/poppins/100.css' layer(fonts);
+@import '@fontsource/poppins/200.css' layer(fonts);
+@import '@fontsource/poppins/300.css' layer(fonts);
+@import '@fontsource/poppins/400.css' layer(fonts);
+@import '@fontsource/poppins/500.css' layer(fonts);
+@import '@fontsource/poppins/600.css' layer(fonts);
+@import '@fontsource/poppins/700.css' layer(fonts);
+@import '@fontsource/poppins/800.css' layer(fonts);
+@import '@fontsource/poppins/900.css' layer(fonts);
+@import '@fontsource/poppins/100-italic.css' layer(fonts);
+@import '@fontsource/poppins/200-italic.css' layer(fonts);
+@import '@fontsource/poppins/300-italic.css' layer(fonts);
+@import '@fontsource/poppins/400-italic.css' layer(fonts);
+@import '@fontsource/poppins/500-italic.css' layer(fonts);
+@import '@fontsource/poppins/600-italic.css' layer(fonts);
+@import '@fontsource/poppins/700-italic.css' layer(fonts);
+@import '@fontsource/poppins/800-italic.css' layer(fonts);
+@import '@fontsource/poppins/900-italic.css' layer(fonts);
+
+@layer fonts {
+    @font-face {
+        font-display: block;
+    }
+}
