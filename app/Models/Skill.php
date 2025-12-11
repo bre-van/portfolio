@@ -8,6 +8,8 @@ use Illuminate\Support\Str;
 
 class Skill extends Model
 {
+    protected $fillable = ['name', 'slug', 'icon', 'sort_order'];
+
     protected static function booted(): void
     {
         static::creating(function (Skill $skill) {

@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class JobPosition extends Model
 {
+    protected $fillable = ['name', 'description', 'current', 'start_date', 'end_date', 'location', 'company_id'];
+
     public function company(): BelongsTo
     {
         return $this->belongsTo(Company::class);

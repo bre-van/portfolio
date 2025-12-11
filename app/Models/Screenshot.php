@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Screenshot extends Model
 {
+    protected $fillable = ['project_id', 'image'];
+
     public function project(): BelongsTo
     {
         return $this->belongsTo(Project::class);

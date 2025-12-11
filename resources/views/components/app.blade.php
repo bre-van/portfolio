@@ -13,9 +13,8 @@
 </head>
 <body
     class="bg-black text-gray-300">
-    <x-nav.main />
-
+<x-nav.main/>
 {{ $slot }}
-    <x-footer />
+<x-footer/>
 </body>
 </html>
