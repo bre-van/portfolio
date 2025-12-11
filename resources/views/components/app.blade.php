@@ -16,5 +16,6 @@
     <x-nav.main />
 
 {{ $slot }}
+    <x-footer />
 </body>
 </html>

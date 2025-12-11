@@ -1,27 +1,32 @@
 @props([
         'link' => '#',
         'active' => false,
-        'mobile' => false,
+        'inline' => true,
         'classes' => ''
         ])
 
 @if($active)
     @php
-        $classes .= ' text-amber-400 border-b-2 border-amber-400';
+        $classes .= ' text-primary';
+
+        if($inline)
+        {
+            $classes .= ' border-b-2 border-primary';
+        }
     @endphp
 @endif
 
-@if($mobile)
+@if(!$inline)
     @php
         $classes .= ' block';
     @endphp
 @else
     @php
-        $classes .= ' hover:border-b-2 hover:border-amber-400 transition-colors duration-500 text-xl';
+        $classes .= ' hover:border-b-2 hover:border-primary transition-colors duration-500 text-xl';
     @endphp
 @endif
 
 
-<a href="{{ $link }}" aria-current="page" class="py-2 border-b-0 hover:text-amber-400 {{ $classes }}">
+<a href="{{ $link }}" aria-current="page" class="border-b-0 hover:text-primary {{ $classes }}">
     {{ $slot }}
 </a>
