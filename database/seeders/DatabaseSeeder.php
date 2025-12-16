@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Database\Factories\ProjectFactory;
+use Database\Factories\SkillFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -21,5 +23,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        SkillFactory::new()->count(5)->create();
+        ProjectFactory::new()->count(20)->create();
     }
 }

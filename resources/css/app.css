@@ -10,6 +10,7 @@
     --font-sans: 'Poppins', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
     --color-primary: #fbbf24;
+    --color-primary-dark: #100e06; /* fallback */
 }
 
 [x-cloak] {
