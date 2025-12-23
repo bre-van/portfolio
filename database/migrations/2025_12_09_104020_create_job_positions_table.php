@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->boolean('current')->default(true);
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
             $table->string('location')->nullable();

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\JobPosition;
 use App\Models\Project;
 use App\Models\Screenshot;
 use App\Models\Skill;
@@ -23,13 +24,13 @@ class ProjectFactory extends Factory
         $finished = $this->faker->dateTimeBetween($started);
 
         return [
-            'title' => $this->faker->sentence,
+            'title' => $this->faker->words(2, true),
             'summary' => $this->faker->paragraph,
             'description' => $this->faker->paragraphs(5, true),
             'started_at' => $started,
             'finished_at' => $finished,
             'url' => $this->faker->url(),
-            'featured' => $this->faker->boolean(20)
+            'featured' => $this->faker->boolean(20),
         ];
     }
 
@@ -41,17 +42,13 @@ class ProjectFactory extends Factory
                 Screenshot::factory()->count(rand(1, 4))->make()
             );
 
-            $skillsCount = Skill::count();
+            $skillIds = Skill::query()
+                ->inRandomOrder()
+                ->limit(3)
+                ->pluck('id')
+                ->all();
 
-            if ($skillsCount > 0) {
-                $attachCount = min(rand(1, 5), $skillsCount);
-
-                $skillIds = Skill::query()
-                    ->inRandomOrder()
-                    ->limit($attachCount)
-                    ->pluck('id')
-                    ->all();
-
+            if (count($skillIds) > 0) {
                 $project->skills()->attach($skillIds);
             }
         });

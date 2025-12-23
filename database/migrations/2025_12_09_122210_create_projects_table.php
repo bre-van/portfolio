@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('finished_at')->nullable();
             $table->string('url')->nullable();
             $table->boolean('featured')->default(false);
+            $table->foreignId('job_position_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

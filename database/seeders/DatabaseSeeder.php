@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Database\Factories\EducationFactory;
+use Database\Factories\JobPositionFactory;
 use Database\Factories\ProjectFactory;
 use Database\Factories\SkillFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -17,14 +19,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Brecht',
+            'email' => 'bvanderdonckt@gmail.com',
+            'password' => bcrypt('test'),
         ]);
 
-        SkillFactory::new()->count(5)->create();
-        ProjectFactory::new()->count(20)->create();
+        SkillFactory::new()->count(10)->create();
+        JobPositionFactory::new()->count(3)->create();
+        EducationFactory::new()->count(3)->create();
     }
 }
