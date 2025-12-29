@@ -15,12 +15,9 @@
         </p>
     </div>
 
-    <div class="text-sm text-neutral-400">
-        <span
-            class="inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1">
-            {{ $job->startDate() }} — {{ $job->endDate() ?? 'heden' }}
-        </span>
-    </div>
+    <x-date-pill>
+        {{ $job->startDate() }} — {{ $job->endDate() ?? 'heden' }}
+    </x-date-pill>
 </div>
 
 @if(!empty($job->description))

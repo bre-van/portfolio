@@ -15,10 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('type');
-            $table->string('summary')->nullable();
+            $table->string('image');
             $table->text('description')->nullable();
-            $table->date('started_at')->nullable();
-            $table->date('finished_at')->nullable();
+            $table->date('finished_at');
             $table->string('url')->nullable();
             $table->boolean('featured')->default(false);
             $table->foreignId('job_position_id')->nullable()->constrained();

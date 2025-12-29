@@ -15,6 +15,7 @@ class ProjectList extends Component
     public int $limit = 6;
     public bool $showMoreButton = true;
     public array $selectedSkills = [];
+    public ?int $selectedProjectId = null;
 
     protected $queryString = [
     ];
@@ -25,14 +26,24 @@ class ProjectList extends Component
         $this->resetPage();
     }
 
+    public function selectProject(int $projectId): void
+    {
+        $this->selectedProjectId = $projectId;
+    }
+
+    public function closeModal(): void
+    {
+        $this->selectedProjectId = null;
+    }
+
     public function render()
     {
         $total = Project::count();
 
         $projects = Project::query()
             ->with('skills')
-            ->latest()
-            ->limit($this->limit);
+            ->orderBy('featured', 'desc')
+            ->orderBy('started_at', 'desc');
 
         if ($total > $this->limit) {
             $projects = $projects->limit($this->limit);
@@ -42,8 +53,13 @@ class ProjectList extends Component
 
         $projects = $projects->get();
 
+        $selectedProject = $this->selectedProjectId
+            ? Project::with('skills')->find($this->selectedProjectId)
+            : null;
+
         return view('livewire.projects.list', [
-            'projects' => $projects
+            'projects' => $projects,
+            'selectedProject' => $selectedProject
         ]);
     }
 }

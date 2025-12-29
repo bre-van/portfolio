@@ -26,13 +26,10 @@
                 </div>
             </div>
         </div>
-        <div class="opacity-0 transition-all ease-out duration-700 pt-50"
-             x-data="{ show: false }"
-             x-init="setTimeout(() => show = true, 500)"
-             x-bind:class="show ? 'opacity-100 visible' : 'opacity-0 invisible'">
+        <x-fadeIn :delay="300">
             <img src="{{ asset('images/brecht-photo.png') }}" alt="Brecht Vanderdonckt"
-                 class="rounded-lg shadow-lg object-cover align-bottom">
-        </div>
+                 class="rounded-lg shadow-lg object-cover align-bottom pt-50">
+        </x-fadeIn>
     </div>
 </div>
 

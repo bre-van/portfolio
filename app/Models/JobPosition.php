@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -23,11 +24,11 @@ class JobPosition extends Model
     }
 
     public function startDate(): String {
-        return $this->start_date;
+        return Carbon::parse($this->start_date)->format('m/Y');
     }
 
     public function endDate(): String
     {
-        return $this->end_date;
+        return Carbon::parse($this->end_date)->format('m/Y');
     }
 }

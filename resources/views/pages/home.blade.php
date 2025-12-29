@@ -5,6 +5,6 @@
 
     <x-sections.hero />
     <x-sections.projects />
-    <x-sections.carreer />
+    <x-sections.carreer :jobPositions="$jobPositions" :educations="$educations" />
     <x-sections.contact />
 </x-app>

@@ -2,9 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\JobPosition;
 use App\Models\Project;
-use App\Models\Screenshot;
 use App\Models\Skill;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -20,15 +18,13 @@ class ProjectFactory extends Factory
      */
     public function definition(): array
     {
-        $started = $this->faker->dateTimeBetween('-15 years');
-        $finished = $this->faker->dateTimeBetween($started);
+        $finished = $this->faker->dateTimeBetween('-15 years');
 
         return [
             'title' => $this->faker->words(2, true),
             'type' => $this->faker->words(1, true),
-            'summary' => $this->faker->paragraph,
+            'image' => $this->faker->imageUrl(640, 480, 'projects'),
             'description' => $this->faker->paragraphs(5, true),
-            'started_at' => $started,
             'finished_at' => $finished,
             'url' => $this->faker->url(),
             'featured' => $this->faker->boolean(20),
@@ -38,11 +34,6 @@ class ProjectFactory extends Factory
     public function configure()
     {
         return $this->afterCreating(function (Project $project) {
-            // create 1-4 screenshots and associate via hasMany
-            $project->screenshots()->saveMany(
-                Screenshot::factory()->count(rand(1, 4))->make()
-            );
-
             $skillIds = Skill::query()
                 ->inRandomOrder()
                 ->limit(3)
