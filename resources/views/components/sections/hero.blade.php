@@ -1,21 +1,18 @@
 <div class="mx-auto max-w-7xl" id="hero">
-    <div class="flex items-center">
-        <div class="flex-1 lg:pr-20 pt-10 opacity-0 transition-all ease-out duration-700"
-             x-data="{ show: false }"
-             x-init="setTimeout(() => show = true, 50)"
-             x-bind:class="show ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-4'">
+    <div class="xl:flex items-center px-15 xl:pr-0">
+        <div class="flex-1 pt-30 lg:pr-20">
             <span class="text-primary text-3xl">
                 Hi!
             </span>
-            <h1 class="text-6xl/16 my-3 font-bold text-gray-100">
-                Ik ben <span class="text-nowrap">Brecht Vanderdonckt</span>
+            <h1 class="text-4xl lg:text-6xl/16 my-3 font-bold text-gray-100">
+                Ik ben <span class="lg:text-nowrap">Brecht Vanderdonckt</span>
             </h1>
-            <h2 class="text-3xl mb-3">
+            <h2 class="text-xl lg:text-3xl mb-3">
                 Full Stack Web Developer
             </h2>
-            <div class="flex gap-5 mt-10 mb-20 items-center">
+            <div class="flex flex-col gap-y-15 sm:flex-row sm:gap-5 mt-10 mb-20 items-center">
                 <div>
-                    <x-button link="#contact">
+                    <x-button link="#footer">
                         Contacteer mij
                     </x-button>
                 </div>
@@ -26,10 +23,13 @@
                 </div>
             </div>
         </div>
-        <x-fadeIn :delay="300">
-            <img src="{{ asset('images/brecht-photo.png') }}" alt="Brecht Vanderdonckt"
-                 class="rounded-lg shadow-lg object-cover align-bottom pt-50">
-        </x-fadeIn>
+            <x-fadeIn :delay="300">
+                <div class="xl:pt-50 max-w-md xl:max-w-none">
+                    <img src="{{ asset('images/brecht-photo.png') }}"
+                         alt="Brecht Vanderdonckt"
+                         class="object-cover align-bottom">
+                </div>
+            </x-fadeIn>
     </div>
 </div>
 
@@ -39,7 +39,8 @@
             Over mezelf
         </h2>
         <p class="mt-4 leading-relaxed">
-            <strong>Ik ben een ervaren Full Stack Web Developer en al professioneel actief in de websector sinds 2011.</strong>
+            <strong>Ik ben een ervaren Full Stack Web Developer en al professioneel actief in de websector sinds
+                2011.</strong>
             Doorheen de jaren heb ik bij PBS Benelux meegewerkt aan uiteenlopende webapplicaties,
             variërend van grootschalige B2B-e-commerceplatformen tot interne back-office tools.
         </p>

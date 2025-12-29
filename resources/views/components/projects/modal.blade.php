@@ -40,10 +40,27 @@
             <h2 class="text-2xl font-semibold">
                 {{ $project->title }}
             </h2>
+            <h3 class="text-sm text-gray-500">
+                @if($project->finished_at)
+                    Afgewerkt: {{ $project->finishedDate() }}
+                @endif
+            </h3>
         </div>
 
         <div class="prose max-w-none">
             {{ $project->description }}
+        </div>
+
+        @if ($project->jobPosition)
+            <div class="mt-5 mb-2 text-gray-400">
+                Gerealiseerd bij: {{ $project->jobPosition->company->name }} ({{ $project->jobPosition->name }})
+            </div>
+        @endif
+
+        <div class="flex flex-wrap gap-2 mt-5">
+            @foreach ($project->skills as $skill)
+                <x-skills.tag :skill="$skill"/>
+            @endforeach
         </div>
     </div>
 </div>

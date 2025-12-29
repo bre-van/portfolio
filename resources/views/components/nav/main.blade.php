@@ -6,8 +6,8 @@
                 <div class="relative flex items-bottom justify-between">
                     <x-logo/>
 
-                    <div class="hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-10">
+                    <div class="hidden md:ml-6 md:block">
+                        <div class="flex md:space-x-5 lg:space-x-10">
                             <x-nav.nav-menu :inline="true"/>
                         </div>
                     </div>
@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <div x-show="open" x-cloak id="mobile-menu" class="block sm:hidden">
+            <div x-show="open" x-cloak id="mobile-menu" class="block md:hidden">
                 <div class="space-y-1 px-2 pt-2 pb-3">
                     <x-nav.nav-menu/>
                 </div>

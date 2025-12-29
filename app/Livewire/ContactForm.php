@@ -23,9 +23,8 @@ class ContactForm extends Component
     {
         $this->validate();
 
-        // Hier kan je later makkelijk uitbreiden
         Mail::raw($this->message, function ($mail) {
-            $mail->to('jij@domein.be')
+            $mail->to($mail->to(config('contact.recipient')))
                 ->replyTo($this->email, $this->name)
                 ->subject('Nieuw contact via portfolio');
         });

@@ -54,7 +54,10 @@ class ProjectList extends Component
         $projects = $projects->get();
 
         $selectedProject = $this->selectedProjectId
-            ? Project::with('skills')->find($this->selectedProjectId)
+            ? Project::with('skills')
+                ->with('jobPosition')
+                ->with('jobPosition.company')
+                ->find($this->selectedProjectId)
             : null;
 
         return view('livewire.projects.list', [

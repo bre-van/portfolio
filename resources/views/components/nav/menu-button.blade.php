@@ -1,4 +1,4 @@
-<div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+<div class="absolute inset-y-0 right-0 flex items-center md:hidden">
     <!-- Mobile menu button-->
     <button type="button" @click="open = !open"
             class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-gray-100 focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">

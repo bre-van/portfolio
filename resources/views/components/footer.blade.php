@@ -1,11 +1,11 @@
-<div class="relative bg-primary-dark text-gray-400">
+<div class="relative bg-primary-dark text-gray-400" id="footer">
     <!--
     <svg class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-gray-950" preserveAspectRatio="none" viewBox="0 0 1440 54">
         <path fill="currentColor" d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"></path>
     </svg>-->
-    <div class="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl md:px-24 lg:px-8">
-        <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
-            <div class="md:max-w-md lg:col-span-2">
+    <div class="px-4 pt-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="md:flex gap-16 row-gap-10 mb-8 items-center">
+            <div class="flex-1">
                 <x-logo/>
                 <div class="mt-4 lg:max-w-sm">
                     <p class="text-gray-100">
@@ -13,12 +13,10 @@
                     </p>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
-                <div>
-                    <ul class="mt-2 space-y-2">
-                        <x-nav.nav-menu/>
-                    </ul>
-                </div>
+            <div>
+                <a href="mailto:contact@brechtvdt.be" class="text-2xl text-gray-100  hover:text-primary">
+                    contact@brechtvdt.be
+                </a>
             </div>
         </div>
         <div class="flex flex-col justify-between pt-5 pb-10 border-t border-gray-800 sm:flex-row">
@@ -27,8 +25,10 @@
             </p>
             <div class="flex items-center mt-4 space-x-3 sm:mt-0">
                 <a href="https://github.com/bre-van/" title="GitHub">
-                    <svg class="w-6 h-6 text-primary hover:text-gray-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.335-5.466-5.93 0-1.31.467-2.381 1.235-3.221-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.98-.399 3-.405 1.02.006 2.043.139 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.911 1.23 3.221 0 4.61-2.805 5.625-5.475 5.92.429.369.81 1.096.81 2.21 0 1.594-.015 2.877-.015 3.27 0 .315.21.694.825.576C20.565 22.092 24 17.592 24 12.297 24 5.67 18.63.297 12 .297z"/>
+                    <svg class="w-6 h-6 text-primary hover:text-gray-100" aria-hidden="true"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.335-5.466-5.93 0-1.31.467-2.381 1.235-3.221-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.98-.399 3-.405 1.02.006 2.043.139 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.911 1.23 3.221 0 4.61-2.805 5.625-5.475 5.92.429.369.81 1.096.81 2.21 0 1.594-.015 2.877-.015 3.27 0 .315.21.694.825.576C20.565 22.092 24 17.592 24 12.297 24 5.67 18.63.297 12 .297z"/>
                     </svg>
                 </a>
 

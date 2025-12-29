@@ -2,7 +2,8 @@
     'project',
 ])
 
-<div class="flex flex-row project-card bg-primary-dark border border-gray-950 hover:border-gray-800 cursor-pointer group transition-colors duration-500">
+<div
+    class="flex flex-row project-card bg-primary-dark border border-gray-950 hover:border-gray-800 cursor-pointer group transition-colors duration-500">
     <div class="relative aspect-16/10 overflow-hidden">
         <img
             src="{{ $project->image }}"

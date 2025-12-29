@@ -22,7 +22,7 @@
     @endphp
 @else
     @php
-        $classes .= ' hover:border-b-2 hover:border-primary transition-colors duration-500 text-xl';
+        $classes .= ' hover:border-b-2 hover:border-primary transition-colors duration-500 lg:text-xl';
     @endphp
 @endif
 
