@@ -16,7 +16,7 @@
                     Ik ben <span class="text-nowrap">Brecht Vanderdonckt</span>
                 </h1>
                 <div class="bg-primary-dark p-9 my-5 text-lg/7 mb-15 rounded-lg">
-                    <h2 class="text-amber-400 text-3xl mb-3">
+                    <h2 class="text-primary text-3xl mb-3">
                         Ervaren Full Stack Web Developer
                     </h2>
                     <p>
@@ -33,7 +33,7 @@
                         </x-button>
                     </div>
                     <div>
-                        <x-button :link="route('contact')">
+                        <x-button :link="route('projects')">
                             Bekijk mijn portfolio
                         </x-button>
                     </div>
@@ -43,7 +43,7 @@
                  x-data="{ show: false }"
                  x-init="setTimeout(() => show = true, 500)"
                  x-bind:class="show ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-8'">
-                <img src="{{ asset('images/brecht-vector2.png') }}" alt="Brecht Vanderdonckt"
+                <img src="{{ asset('images/brecht-photo.png') }}" alt="Brecht Vanderdonckt"
                      class="rounded-lg shadow-lg object-cover align-bottom">
             </div>
         </div>

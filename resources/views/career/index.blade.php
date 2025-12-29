@@ -4,7 +4,7 @@
     </x-slot>
 
     <header class="max-w-7xl mx-auto my-6">
-        <h2 class="text-6xl/14 font-bold text-pretty text-amber-200">
+        <h2 class="text-6xl/14 font-bold text-pretty text-primary">
             Carriére
         </h2>
     </header>

@@ -1,7 +1,7 @@
 @props(['job'])
 
 <span
-    class="absolute -start-1.5 mt-2 flex h-3 w-3 rounded-full bg-amber-400 ring-4 ring-black"></span>
+    class="absolute -start-1.5 mt-2 flex h-3 w-3 rounded-full bg-primary ring-4 ring-black"></span>
 
 <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
     <div>
