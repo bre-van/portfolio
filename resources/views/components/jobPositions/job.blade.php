@@ -5,7 +5,7 @@
 
 <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
     <div>
-        <h3 class="text-lg font-semibold text-white">
+        <h3 class="text-lg font-semibold text-gray-100">
             {{ $job->name }}
             <span class="text-neutral-400 font-normal">— {{ $job->company->name }}</span>
         </h3>
@@ -18,7 +18,7 @@
     <div class="text-sm text-neutral-400">
         <span
             class="inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1">
-            {{ $job->start_date }} — {{ $job->end_date ?? 'heden' }}
+            {{ $job->startDate() }} — {{ $job->endDate() ?? 'heden' }}
         </span>
     </div>
 </div>

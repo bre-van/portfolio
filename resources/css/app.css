@@ -9,10 +9,13 @@
 @theme {
     --font-sans: 'Poppins', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
-    --color-primary: #92abff;
+    --color-primary: #6387ff;
     /*--color-primary: #fbbf24;*/
     --color-primary-dark: #0b0d14; /* fallback */
+}
 
+html {
+    scroll-behavior: smooth;
 }
 
 [x-cloak] {

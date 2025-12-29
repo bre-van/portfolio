@@ -21,4 +21,13 @@ class JobPosition extends Model
     {
         return $this->hasMany(Project::class);
     }
+
+    public function startDate(): String {
+        return $this->start_date;
+    }
+
+    public function endDate(): String
+    {
+        return $this->end_date;
+    }
 }

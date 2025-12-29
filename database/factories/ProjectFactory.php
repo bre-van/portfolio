@@ -25,6 +25,7 @@ class ProjectFactory extends Factory
 
         return [
             'title' => $this->faker->words(2, true),
+            'type' => $this->faker->words(1, true),
             'summary' => $this->faker->paragraph,
             'description' => $this->faker->paragraphs(5, true),
             'started_at' => $started,

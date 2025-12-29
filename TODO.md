@@ -1,0 +1,3 @@
+- Responsive view
+- Project details card
+- Highlight nav item on scroll
