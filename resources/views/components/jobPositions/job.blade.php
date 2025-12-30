@@ -16,7 +16,7 @@
     </div>
 
     <x-date-pill>
-        {{ $job->startDate() }} — {{ $job->endDate() ?? 'heden' }}
+        {{ $job->startDate() }} — {{ $job->current ? 'heden' : $job->endDate() }}
     </x-date-pill>
 </div>
 
@@ -36,8 +36,8 @@
             <li class="flex gap-3">
                 <span class="mt-2 h-1.5 w-1.5 rounded-full bg-neutral-500"></span>
                 <span>
-                                                    {{ $project->title }}
-                                                </span>
+                    {{ $project->title }}
+                </span>
             </li>
 
             @php

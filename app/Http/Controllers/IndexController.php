@@ -9,8 +9,14 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $jobPositions = JobPosition::with(['company', 'projects.skills'])->get();
-        $educations = Education::get();
+        $jobPositions = JobPosition::with(['company', 'projects.skills'])
+            ->orderBy('current', 'desc')
+            ->orderBy('end_date', 'desc')
+            ->get();
+
+        $educations = Education::query()
+            ->orderBy('end_date', 'desc')
+            ->get();
 
         return view('pages.home', ['jobPositions' => $jobPositions, 'educations' => $educations]);
     }
