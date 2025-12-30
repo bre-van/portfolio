@@ -7,14 +7,17 @@
         <div class="md:flex gap-16 row-gap-10 mb-8 items-center">
             <div class="flex-1">
                 <x-logo/>
-                <div class="mt-4 lg:max-w-sm">
+                <div class="lg:mt-2 lg:max-w-sm">
                     <p class="text-gray-100">
                         Full Stack Web Developer
                     </p>
                 </div>
             </div>
-            <div>
-                <a href="mailto:contact@brechtvdt.be" class="text-2xl text-gray-100  hover:text-primary">
+            <div class="mt-5 md:mt-0">
+                <h2 class="text-lg text-gray-100">
+                Mail mij:
+                </h2>
+                <a href="mailto:contact@brechtvdt.be" class="items-center text-xl md:text-2xl text-primary  hover:text-primary/80">
                     contact@brechtvdt.be
                 </a>
             </div>

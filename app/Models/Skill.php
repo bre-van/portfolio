@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\SkillLevel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -11,6 +12,10 @@ class Skill extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'slug', 'icon', 'sort_order'];
+
+    protected $casts = [
+        'level' => SkillLevel::class,
+    ];
 
     protected static function booted(): void
     {

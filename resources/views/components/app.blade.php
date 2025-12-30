@@ -16,10 +16,13 @@
 </head>
 <body
     class="bg-black text-gray-300">
-<x-nav.main/>
-{{ $slot }}
 
-<x-footer/>
+<div x-data="{ activeSection: null }" x-init="console.log('initial activeSection', activeSection); $watch('activeSection', value => console.log('activeSection', value))">
+    <x-nav.main/>
+    {{ $slot }}
+
+    <x-footer/>
+</div>
 
 @livewireScripts
 </body>
