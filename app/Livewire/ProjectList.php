@@ -43,7 +43,7 @@ class ProjectList extends Component
         $projects = Project::query()
             ->with('skills')
             ->orderBy('featured', 'desc')
-            ->orderBy('started_at', 'desc');
+            ->orderBy('finished_at', 'desc');
 
         if ($total > $this->limit) {
             $projects = $projects->limit($this->limit);
