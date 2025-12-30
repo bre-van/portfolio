@@ -6,7 +6,7 @@
     class="flex flex-row project-card bg-primary-dark border border-gray-950 hover:border-gray-800 cursor-pointer group transition-colors duration-500">
     <div class="relative aspect-16/10 overflow-hidden">
         <img
-            src="{{ $project->image }}"
+            src="{{ asset('images/projects') }}/{{ $project->image }}"
             alt="{{ $project->title }}"
             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />

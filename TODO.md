@@ -7,3 +7,5 @@ PRIO
 Nice to have
 - Skills oplijsting
 - Favicon
+- Contact form
+- Adres informatie (Ronse België)

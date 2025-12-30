@@ -1,4 +1,5 @@
 @props(['jobPositions', 'educations'])
+
 <x-section anchor="career" title="Carrière">
     <div class="max-w-7xl mx-auto flex flex-col lg:flex-row">
         <section class="mb-10">

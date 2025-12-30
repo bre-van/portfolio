@@ -31,7 +31,7 @@
     >
         <div class="mb-4">
             <img
-                src="{{ $project->image }}"
+                src="{{ asset('images/projects') }}/{{ $project->image }}"
                 alt="{{ $project->title }}"
                 class="w-full h-64 object-cover rounded-lg"
             >
