@@ -1,6 +1,6 @@
 <div>
     <div>
-        <div class="grid gap-10 lg:grid-cols-2">
+        <div class="grid gap-10 xl:grid-cols-2">
             @forelse ($projects as $project)
                 <div wire:click="selectProject({{ $project->id }})">
                     <x-projects.card :project="$project"/>

@@ -33,10 +33,10 @@
             <img
                 src="{{ asset('images/projects') }}/{{ $project->image }}"
                 alt="{{ $project->title }}"
-                class="w-full h-64 object-cover rounded-lg"
+                class="w-full h-64 object-cover"
             >
         </div>
-        <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center justify-between">
             <h2 class="text-2xl font-semibold">
                 {{ $project->title }}
             </h2>
@@ -47,9 +47,21 @@
             </h3>
         </div>
 
+        <h4 class="text-lg mb-4 text-gray-400">
+            {{ $project->type }}
+        </h4>
+
         <div class="prose max-w-none">
-            {{ $project->description }}
+            {!! nl2br($project->description) !!}
         </div>
+
+        @if ($project->url)
+            <div class="mt-5">
+                <a href="{{ $project->url }}" target="_blank" class="text-primary hover:underline">
+                    Bezoek de website
+                </a>
+            </div>
+        @endif
 
         @if ($project->jobPosition)
             <div class="mt-5 mb-2 text-gray-400">
