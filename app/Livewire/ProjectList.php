@@ -11,8 +11,8 @@ class ProjectList extends Component
 {
     use WithPagination;
 
-    public int $pageSize = 6;
-    public int $limit = 6;
+    public int $pageSize = 8;
+    public int $limit = 8;
     public bool $showMoreButton = true;
     public array $selectedSkills = [];
     public ?int $selectedProjectId = null;

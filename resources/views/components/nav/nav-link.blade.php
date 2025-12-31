@@ -30,6 +30,6 @@
 
 <a href="{{ $link }}" aria-current="page"
    class="border-b-0 hover:text-primary {{ $classes }}"
-   :class="activeSection === '{{ $anchor }}' ? 'border-b-2 text-primary' : ''">
+   :class="activeSection === '{{ $anchor }}' ? 'md:border-b-2 text-primary' : ''">
     {{ $slot }}
 </a>
