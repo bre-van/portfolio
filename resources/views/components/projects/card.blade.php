@@ -3,8 +3,8 @@
 ])
 
 <div
-    class="flex flex-row project-card bg-primary-dark border border-gray-950 hover:border-gray-800 cursor-pointer group transition-colors duration-500">
-    <div class="relative aspect-16/10 overflow-hidden max-w-xs">
+    class="md:flex md:flex-row project-card bg-primary-dark border border-gray-950 hover:border-gray-800 cursor-pointer group transition-colors duration-500">
+    <div class="relative aspect-16/10 overflow-hidden md:max-w-xs">
         <img
             src="{{ asset('images/projects') }}/{{ $project->image }}"
             alt="{{ $project->title }}"

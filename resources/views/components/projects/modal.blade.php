@@ -19,7 +19,7 @@
 
     <button
         @click="close()"
-        class="text-neutral-400 hover:text-neutral-600 text-4xl absolute top-10 right-10"
+        class="text-neutral-400 hover:text-neutral-600 md:text-4xl z-52 absolute top-2 right-2 md:top-5 md:right-5"
     >
         ✕
     </button>
@@ -27,16 +27,17 @@
     <!-- Modal -->
     <div
         x-transition.scale
-        class="relative z-10 w-full max-w-4xl bg-primary-dark p-6 shadow-xl"
+        class="flex flex-col relative z-10 w-full max-w-[80vw] lg:max-w-4xl bg-primary-dark shadow-xl max-h-[90vh]"
     >
         <div class="mb-4">
             <img
                 src="{{ asset('images/projects') }}/{{ $project->image }}"
                 alt="{{ $project->title }}"
-                class="w-full h-64 object-cover"
+                class="w-full h-40 md:h-64 object-cover"
             >
         </div>
-        <div class="flex items-center justify-between">
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between px-6">
             <h2 class="text-2xl font-semibold">
                 {{ $project->title }}
             </h2>
@@ -47,29 +48,29 @@
             </h3>
         </div>
 
-        <h4 class="text-lg mb-4 text-gray-400">
+        <h4 class="text-lg mb-4 text-gray-400 px-6">
             {{ $project->type }}
         </h4>
 
-        <div class="prose max-w-none">
+        <div class="prose max-w-none flex-1 overflow-y-auto px-6">
             {!! nl2br($project->description) !!}
+
+            @if ($project->jobPosition)
+                <p class="mt-5 mb-2 text-gray-400">
+                    Gerealiseerd bij: {{ $project->jobPosition->company->name }} ({{ $project->jobPosition->name }})
+                </p>
+            @endif
+
         </div>
 
         @if ($project->url)
-            <div class="mt-5">
+            <div class="mt-5 px-6">
                 <a href="{{ $project->url }}" target="_blank" class="text-primary hover:underline">
                     Bezoek de website
                 </a>
             </div>
         @endif
-
-        @if ($project->jobPosition)
-            <div class="mt-5 mb-2 text-gray-400">
-                Gerealiseerd bij: {{ $project->jobPosition->company->name }} ({{ $project->jobPosition->name }})
-            </div>
-        @endif
-
-        <div class="flex flex-wrap gap-2 mt-5">
+        <div class="flex flex-wrap gap-2 mt-5 p-6">
             @foreach ($project->skills as $skill)
                 <x-skills.tag :skill="$skill"/>
             @endforeach
