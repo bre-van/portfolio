@@ -17,7 +17,7 @@
 <body
     class="bg-black text-gray-300">
 
-<div x-data="{ activeSection: null }" x-init="console.log('initial activeSection', activeSection); $watch('activeSection', value => console.log('activeSection', value))">
+<div x-data="{ activeSection: null }">
     <x-nav.main/>
     {{ $slot }}
 
