@@ -13,6 +13,7 @@
         Brecht Vanderdonckt - Full Stack Developer
     </title>
 
+    <meta name="description" content="Portfolio van Brecht Vanderdonckt, Full Stack Web Developer met focus op PHP, Laravel en e-commerce. Overzicht van platformen, webshops en maatwerkprojecten.">
     <link rel="icon" type="image/png" href="{{ asset('/images/favicon.png') }}">
 
     @if (app()->environment('production'))
