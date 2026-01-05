@@ -13,10 +13,10 @@ Nice to have
 Projecten
 - PBS Shop✅
 - PBS Partner Front✅
-- Back-office?
+- Back-office ✅
 - Vendor Platform ✅
 - CCC Platform ✅
-- Mailings
+- Mailings 
 - Calipage Run
 - Q-Connect
 - Videos

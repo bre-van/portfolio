@@ -4,10 +4,10 @@
             <span class="text-primary text-3xl">
                 Hi!
             </span>
-            <h1 class="text-4xl lg:text-6xl/16 my-3 font-bold text-gray-100">
-                Ik ben <span class="lg:text-nowrap">Brecht Vanderdonckt</span>
+            <h1 class="text-4xl lg:text-6xl/16 my-2 font-bold text-gray-100">
+                Ik ben<br/><span class="sm:text-nowrap">Brecht Vanderdonckt</span>
             </h1>
-            <h2 class="text-xl lg:text-3xl mb-3">
+            <h2 class="text-xl lg:text-3xl mb-3 text-gray-400">
                 Full Stack Web Developer
             </h2>
             <div class="flex flex-col gap-y-12 sm:flex-row sm:gap-5 mt-10 mb-20 items-center">

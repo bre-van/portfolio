@@ -6,9 +6,9 @@
     <div class="px-8 pt-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="md:flex gap-16 row-gap-10 mb-8 items-center">
             <div class="flex-1">
-                <x-logo/>
-            </div>
-            <div class="mt-5 md:mt-0">
+                <a href="/" title="Home">
+                    <img src="{{ asset("/images/logo.png") }}" alt="Brecht Vanderdonckt" class="max-h-[100px]" />
+                </a>
             </div>
             <div class="mt-5 md:mt-0">
                 <p class="text-lg text-primary flex items-center">

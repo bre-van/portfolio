@@ -11,6 +11,8 @@
         {{ isset($title) ? $title . ' - ' : '' }} Brecht Vanderdonckt
     </title>
 
+    <link rel="icon" type="image/png" href="{{ asset('/images/favicon.png') }}">
+
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -19,6 +21,7 @@
 
 <div x-data="{ activeSection: null }">
     <x-nav.main/>
+
     {{ $slot }}
 
     <x-footer/>
