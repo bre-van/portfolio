@@ -5,13 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @if (!app()->environment('production'))
         <meta name="robots" content="noindex,nofollow">
+    @else
+        <meta name="robots" content="index,follow">
     @endif
 
     <title>
-        {{ isset($title) ? $title . ' - ' : '' }} Brecht Vanderdonckt
+        Brecht Vanderdonckt - Full Stack Developer
     </title>
 
     <link rel="icon" type="image/png" href="{{ asset('/images/favicon.png') }}">
+
+    @if (app()->environment('production'))
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTDHNSMSLE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-KTDHNSMSLE');
+        </script>
+    @endif
 
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])

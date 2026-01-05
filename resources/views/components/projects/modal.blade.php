@@ -33,7 +33,7 @@
             <img
                 src="{{ asset('images/projects') }}/{{ $project->image }}"
                 alt="{{ $project->title }}"
-                class="w-full h-40 md:h-64 object-cover"
+                class="w-full h-80 md:h-40 object-cover object-top"
             >
         </div>
 

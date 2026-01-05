@@ -9,6 +9,7 @@ Nice to have
 - Favicon
 - Contact form
 - Adres informatie (Ronse België)
+- Background fix when modal is open
 
 Projecten
 - PBS Shop✅
@@ -16,9 +17,8 @@ Projecten
 - Back-office ✅
 - Vendor Platform ✅
 - CCC Platform ✅
-- Mailings 
-- Calipage Run
-- Q-Connect
+- Mailings ✅
+- Q-Connect ✅
 - Videos
 - Massaja
 - Cantavanda
