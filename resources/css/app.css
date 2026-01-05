@@ -1,5 +1,6 @@
 @import './fonts.css';
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -20,4 +21,18 @@ html {
 
 [x-cloak] {
     display: none !important;
+}
+
+.project-content p {
+    margin-bottom: 0.75rem;
+}
+
+.project-content ul {
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    list-style: disc;
+}
+
+.project-content li {
+    margin-bottom: 0.25rem;
 }

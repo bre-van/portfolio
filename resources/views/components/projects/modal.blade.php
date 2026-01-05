@@ -17,18 +17,18 @@
     <!-- Backdrop -->
     <div class="absolute inset-0" @click="close()"></div>
 
-    <button
-        @click="close()"
-        class="text-neutral-400 hover:text-neutral-600 md:text-4xl z-52 absolute top-2 right-2 md:top-5 md:right-5"
-    >
-        ✕
-    </button>
 
     <!-- Modal -->
     <div
         x-transition.scale
-        class="flex flex-col relative z-10 w-full max-w-[80vw] lg:max-w-4xl bg-primary-dark shadow-xl max-h-[90vh]"
+        class="flex flex-col relative z-10 bg-primary-dark shadow-xl max-w-[90vw] lg:max-w-4xl max-h-[90vh]"
     >
+        <button
+            @click="close()"
+            class="text-gray-800 hover:text-gray-700 text-xl z-52 absolute top-0 right-0 py-1 px-2 bg-primary hover:bg-primary/80 opacity-90 cursor-pointer"
+        >
+            ✕
+        </button>
         <div class="mb-4">
             <img
                 src="{{ asset('images/projects') }}/{{ $project->image }}"
@@ -41,36 +41,38 @@
             <h2 class="text-2xl font-semibold">
                 {{ $project->title }}
             </h2>
-            <h3 class="text-sm text-gray-500">
-                @if($project->finished_at)
-                    Afgewerkt: {{ $project->finishedDate() }}
-                @endif
-            </h3>
         </div>
 
         <h4 class="text-lg mb-4 text-gray-400 px-6">
             {{ $project->type }}
         </h4>
 
-        <div class="prose max-w-none flex-1 overflow-y-auto px-6">
-            {!! nl2br($project->description) !!}
+        <div class="max-w-none flex-1 overflow-y-auto px-6 project-content">
+            <div class="space-y-3 text-neutral-300 leading-relaxed mb-5">
+                {!! $project->description !!}
+            </div>
 
             @if ($project->jobPosition)
-                <p class="mt-5 mb-2 text-gray-400">
+                <p class="text-gray-400">
                     Gerealiseerd bij: {{ $project->jobPosition->company->name }} ({{ $project->jobPosition->name }})
                 </p>
             @endif
 
-        </div>
+            @if($project->finished_at)
+                <p class="text-gray-400">
+                    Afgewerkt: {{ $project->finishedDate() }}
+                </p>
+            @endif
 
-        @if ($project->url)
-            <div class="mt-5 px-6">
-                <a href="{{ $project->url }}" target="_blank" class="text-primary hover:underline">
-                    Bezoek de website
-                </a>
-            </div>
-        @endif
-        <div class="flex flex-wrap gap-2 mt-5 p-6">
+            @if ($project->url)
+                <div class="mt-5">
+                    <a href="{{ $project->url }}" target="_blank" class="text-primary hover:underline">
+                        Bezoek de website
+                    </a>
+                </div>
+            @endif
+        </div>
+        <div class="flex flex-wrap gap-2 p-6">
             @foreach ($project->skills as $skill)
                 <x-skills.tag :skill="$skill"/>
             @endforeach

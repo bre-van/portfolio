@@ -9,3 +9,16 @@ Nice to have
 - Favicon
 - Contact form
 - Adres informatie (Ronse België)
+
+Projecten
+- PBS Shop✅
+- PBS Partner Front✅
+- Back-office?
+- Vendor Platform ✅
+- CCC Platform ✅
+- Mailings
+- Calipage Run
+- Q-Connect
+- Videos
+- Massaja
+- Cantavanda

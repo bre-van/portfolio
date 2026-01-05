@@ -23,8 +23,8 @@ class ProjectFactory extends Factory
         return [
             'title' => $this->faker->words(2, true),
             'type' => $this->faker->words(1, true),
-            'image' => $this->faker->randomElement(['pbspartner.png', 'pbshop.png']),
-            'description' => $this->faker->paragraphs(5, true),
+            'image' => 'pbspartner.png',
+            'description' => $this->faker->randomHtml(2),
             'finished_at' => $finished,
             'url' => $this->faker->url(),
             'featured' => $this->faker->boolean(20),
