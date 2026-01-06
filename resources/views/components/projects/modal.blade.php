@@ -30,11 +30,11 @@
             ✕
         </button>
         <div class="mb-4">
-            <img
-                src="{{ asset('images/projects') }}/{{ $project->image }}"
-                alt="{{ $project->title }}"
-                class="w-full h-80 md:h-40 object-cover object-top"
-            >
+            <x-image webp="projects/webp/{{$project->webpImage()}}" image="projects/{{$project->image}}"
+                     width="900"
+                     height="400"
+                     class="w-full h-80 md:h-40 object-cover object-top"
+                     alt="{{ $project->title }}" />
         </div>
 
         <div class="flex flex-col md:flex-row md:items-center md:justify-between px-6">

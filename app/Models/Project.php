@@ -27,4 +27,9 @@ class Project extends Model
         return Carbon::parse($this->finished_at)->format('m/Y');
     }
 
+    public function webpImage(): String
+    {
+        return str_replace(['.jpg', '.png'], '.webp', $this->image);
+    }
+
 }

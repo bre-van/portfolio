@@ -5,11 +5,11 @@
 <div
     class="md:flex md:flex-row project-card bg-primary-dark border border-gray-950 hover:border-gray-800 cursor-pointer group transition-colors duration-500">
     <div class="relative aspect-16/10 overflow-hidden md:max-w-xs">
-        <img
-            src="{{ asset('images/projects') }}/{{ $project->image }}"
-            alt="{{ $project->title }}"
-            class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-        />
+        <x-image webp="projects/webp/{{$project->webpImage()}}" image="projects/{{$project->image}}"
+                 width="900"
+                 height="400"
+                 class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                 alt="{{ $project->title }}" />
     </div>
 
     <div class="flex flex-1 flex-row">
