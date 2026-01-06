@@ -10,6 +10,7 @@ Nice to have
 - Contact form
 - Adres informatie (Ronse België)
 - Background fix when modal is open
+- Screenshots when modal is open bigger
 
 Projecten
 - PBS Shop✅

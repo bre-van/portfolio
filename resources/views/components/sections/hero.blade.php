@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="xl:pt-50 max-w-md xl:max-w-none mx-auto">
-            <x-image webp="brecht-photo.webp" image="brecht-photo.jpg" width="511" height="530" alt="Brecht Vanderdonckt" />
+            <x-image webp="brecht-photo.webp" image="brecht-photo.jpg" width="511" height="530" alt="Brecht Vanderdonckt" fetchpriority="high" loading="eager" />
         </div>
     </div>
 </section>

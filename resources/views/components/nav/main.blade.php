@@ -6,7 +6,9 @@
                 <div class="relative flex items-bottom justify-between">
                     <div class="items-center text-xl sm:text-2xl xl:text-4xl text-nowrap font-bold text-primary">
                         <a href="/" class="flex items-center">
-                            <img src="{{ asset("/images/logo.png") }}" alt="BVDT" class="max-h-[55px] mr-1 md:hidden" /> <span class="hidden md:block">Brecht Vanderdonckt</span>
+                            <img src="{{ asset("/images/logo.png") }}"
+                                 loading="eager" fetchpriority="high"
+                                 alt="BVDT" class="max-h-[55px] mr-1 md:hidden" /> <span class="hidden md:block">Brecht Vanderdonckt</span>
                         </a>
                     </div>
 

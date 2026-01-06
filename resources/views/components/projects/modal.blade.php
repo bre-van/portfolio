@@ -33,7 +33,7 @@
             <x-image webp="projects/webp/{{$project->webpImage()}}" image="projects/{{$project->image}}"
                      width="900"
                      height="400"
-                     class="w-full h-80 md:h-40 object-cover object-top"
+                     class="w-full object-cover object-top"
                      alt="{{ $project->title }}" />
         </div>
 

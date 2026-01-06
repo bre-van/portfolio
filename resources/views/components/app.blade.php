@@ -46,6 +46,6 @@
     <x-footer/>
 </div>
 
-@livewireScripts
+@livewireScripts(['defer' => true])
 </body>
 </html>
