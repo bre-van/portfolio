@@ -31,6 +31,14 @@
                 </p>
             </div>
         </div>
+        <footer class="text-sm text-gray-500 mb-5">
+            <p class="text-justify">
+                Ik ben Brecht Vanderdonckt, een ervaren Full Stack Web Developer uit Ronse met meer dan 10 jaar ervaring in het bouwen van performante webapplicaties.<br/>
+                Ik help bedrijven en zelfstandigen in Ronse, de Vlaamse Ardennen en daarbuiten met maatwerk in Laravel, PHP, Livewire en Tailwind CSS.<br/>
+                Op zoek naar een betrouwbare web developer in de regio Ronse? Neem gerust contact op.
+            </p>
+        </footer>
+
         <div class="flex flex-col justify-between pt-5 pb-10 border-t border-gray-800 sm:flex-row">
             <p class="text-sm ">
                 © Copyright 2025 Brecht Vanderdonckt

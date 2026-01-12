@@ -10,11 +10,11 @@
     @endif
 
     <title>
-        Brecht Vanderdonckt - Full Stack Developer
+        Brecht Vanderdonckt - Web Developer - Ronse
     </title>
 
-    <meta name="description" content="Portfolio van Brecht Vanderdonckt, Full Stack Web Developer met focus op PHP, Laravel en e-commerce. Overzicht van platformen, webshops en maatwerkprojecten.">
-    <link rel="icon" type="image/png" href="{{ asset('/images/favicon.png') }}">
+    <meta name="description" content="Portfolio van Brecht Vanderdonckt uit Ronse, Webdeveloper / webdesigner met focus op PHP, Laravel en e-commerce. Overzicht van platformen, webshops en maatwerkprojecten.">
+    <link rel="icon" type="image/png" href="{{ asset('/images/favicon.png') }}" sizes="any">
 
     @if (app()->environment('production'))
         <!-- Google tag (gtag.js) -->
@@ -34,6 +34,8 @@
 
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    @include('partials.schema-person')
 </head>
 <body
     class="bg-black text-gray-300">
