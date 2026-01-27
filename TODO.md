@@ -6,7 +6,7 @@ PRIO
 
 Nice to have
 - Skills oplijsting
-- Favicon
+- Favicon ✅
 - Contact form
 - Adres informatie (Ronse België)
 - Background fix when modal is open
@@ -21,5 +21,5 @@ Projecten
 - Mailings ✅
 - Q-Connect ✅
 - Videos
-- Massaja
+- Massaja ✅
 - Cantavanda

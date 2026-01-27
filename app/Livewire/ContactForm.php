@@ -2,13 +2,15 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
 use Illuminate\Support\Facades\Mail;
+use Livewire\Component;
 
 class ContactForm extends Component
 {
     public string $name = '';
+
     public string $email = '';
+
     public string $message = '';
 
     public bool $sent = false;
@@ -23,9 +25,13 @@ class ContactForm extends Component
     {
         $this->validate();
 
-        Mail::raw($this->message, function ($mail) {
-            $mail->to($mail->to(config('contact.recipient')))
-                ->replyTo($this->email, $this->name)
+        $messageContent = $this->message;
+        $fromEmail = $this->email;
+        $fromName = $this->name;
+
+        Mail::raw($messageContent, function ($mail) use ($fromEmail, $fromName) {
+            $mail->to(config('contact.recipient'))
+                ->replyTo($fromEmail, $fromName)
                 ->subject('Nieuw contact via portfolio');
         });
 

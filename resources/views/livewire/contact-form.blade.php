@@ -2,41 +2,41 @@
     <div class="max-w-3xl">
         @if ($sent)
             <div class="rounded-xl bg-green-900/20 border border-green-700 p-6 text-green-300">
-                Merci! Je bericht is goed aangekomen 👌
+                Merci! Je bericht is goed aangekomen en wordt bekeken 👌
             </div>
         @else
             <form wire:submit.prevent="submit" class="space-y-6">
                 <div>
                     <input
                         type="text"
-                        wire:model.defer="name"
+                        wire:model="name"
                         placeholder="Naam"
                         class="w-full rounded-lg bg-neutral-900 border border-neutral-800 px-4 py-3 text-gray-100
                                focus:border-primary focus:ring-0"
                     >
-                    @error('name') <p class="text-sm text-red-400 mt-1">{{ $message }}</p> @enderror
+                    @error('name') <p class="text-sm text-red-400 mt-1">Uw naam is verplicht</p> @enderror
                 </div>
 
                 <div>
                     <input
                         type="email"
-                        wire:model.defer="email"
+                        wire:model="email"
                         placeholder="E-mail"
                         class="w-full rounded-lg bg-neutral-900 border border-neutral-800 px-4 py-3 text-gray-100
                                focus:border-primary focus:ring-0"
                     >
-                    @error('email') <p class="text-sm text-red-400 mt-1">{{ $message }}</p> @enderror
+                    @error('email') <p class="text-sm text-red-400 mt-1">Het mailadres is niet correct</p> @enderror
                 </div>
 
                 <div>
                     <textarea
-                        wire:model.defer="message"
+                        wire:model="message"
                         rows="5"
                         placeholder="Bericht"
                         class="w-full rounded-lg bg-neutral-900 border border-neutral-800 px-4 py-3 text-gray-100
                                focus:border-primary focus:ring-0"
                     ></textarea>
-                    @error('message') <p class="text-sm text-red-400 mt-1">{{ $message }}</p> @enderror
+                    @error('message') <p class="text-sm text-red-400 mt-1">Het bericht moet minstens 10 karakters bevatten</p> @enderror
                 </div>
 
                 <div class="flex items-center gap-4">
