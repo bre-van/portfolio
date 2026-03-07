@@ -1,4 +1,4 @@
-<div class="fixed bg-primary-dark w-full z-5">
+<div class="fixed bg-primary-dark w-full z-15">
     <div class="mx-auto border-b border-gray-800 px-6">
         <nav x-data="{ open: false }"
              class="relative after:pointer-events-none after:absolute container mx-auto">
