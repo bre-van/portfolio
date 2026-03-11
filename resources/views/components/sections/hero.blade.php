@@ -4,7 +4,7 @@
             <span class="text-primary text-3xl font-medium tracking-tight mb-4 block">
                 Hi!
             </span>
-            <h1 class="text-5xl lg:text-7xl/18 my-4 font-extrabold text-white tracking-tight">
+            <h1 class="text-4xl lg:text-7xl/18 my-4 font-extrabold text-white tracking-tight">
                 Ik ben<br/><span class="text-primary drop-shadow-sm">Brecht Vanderdonckt</span>
             </h1>
             <h2 class="text-2xl lg:text-4xl mb-6 text-gray-400 font-medium">
